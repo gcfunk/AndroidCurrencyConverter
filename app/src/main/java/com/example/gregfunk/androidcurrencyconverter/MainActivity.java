@@ -4,8 +4,23 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
+
+    Double CONVERSION_RATE = 1.33;
+
+    public void convert(View view) {
+        EditText origCurrency = (EditText) findViewById(R.id.origCurrency);
+        TextView newCurrency = (TextView) findViewById(R.id.newCurrency);
+
+        Double currency = Double.parseDouble(origCurrency.getText().toString());
+        currency = currency * CONVERSION_RATE;
+
+        newCurrency.setText("$" + currency.toString());
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
