@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -20,6 +21,7 @@ public class MainActivity extends ActionBarActivity {
         currency = currency * CONVERSION_RATE;
 
         newCurrency.setText("$" + currency.toString());
+        Toast.makeText(getApplicationContext(), "$" + currency.toString(), Toast.LENGTH_LONG).show();
     }
 
     @Override

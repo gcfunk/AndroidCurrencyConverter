@@ -24,7 +24,8 @@
         android:ems="10"
         android:id="@+id/origCurrency"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,9 +41,18 @@
         android:layout_height="wrap_content"
         android:text="Convert US Dollars to Canadian Dollars"
         android:id="@+id/btnConvert"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="39dp"
+        android:onClick="convert"
         android:layout_below="@+id/origCurrency"
-        android:layout_centerHorizontal="true"
-        android:onClick="convert" />
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the amount in US dollars"
+        android:id="@+id/textView"
+        android:textSize="20sp"
+        android:layout_above="@+id/origCurrency"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
